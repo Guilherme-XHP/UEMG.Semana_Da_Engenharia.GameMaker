@@ -1,7 +1,6 @@
 state = "";
 
 spd = 4;
-grav = .4;
 acc = .4;
 dcc = 1;
 h_spd = 0;

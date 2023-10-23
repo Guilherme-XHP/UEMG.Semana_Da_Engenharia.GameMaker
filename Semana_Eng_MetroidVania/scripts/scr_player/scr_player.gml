@@ -11,7 +11,7 @@ function scr_player(){
 	h_spd = clamp(h_spd, -spd, spd);
 	
 	//Gravidade
-	v_spd = v_spd + grav;
+	v_spd = v_spd + global.grav;
 	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
 	
 	if _move = 0{

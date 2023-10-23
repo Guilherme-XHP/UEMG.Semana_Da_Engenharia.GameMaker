@@ -34,10 +34,12 @@ function scr_player(){
 	
 	#region Coyote Time
 		if place_meeting(x, y + 1, obj_collision){
+			double_jump = 2;
 			in_ground = true;
 			coyote_time = 0;
 		}else{
 			coyote_time++;
+			state = "jump";
 			if coyote_time >= coyote_time_max {
 				coyote_time = 0
 				in_ground = false;
@@ -46,11 +48,16 @@ function scr_player(){
 	#endregion
 	
 	#region Jump
-		if in_ground{
-			if key_jump {
-				v_spd = -6;
-				in_ground = false;
-				state = "jump";
+
+		if double_jump >= 1{
+			if in_ground or double_jump >= 1{
+				if key_jump{
+					v_spd = 0;
+					v_spd = -6;
+					in_ground = false;
+					state = "jump";
+					double_jump -= 1;
+				}
 			}
 		}else{
 			in_ground = false;

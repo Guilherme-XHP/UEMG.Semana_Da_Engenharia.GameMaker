@@ -10,7 +10,7 @@
   "ResourceOrderSettings": [
     {"name":"spr_goomba_idle","order":10,"path":"sprites/spr_goomba_idle/spr_goomba_idle.yy",},
     {"name":"spr_player_walk_g","order":5,"path":"sprites/spr_player_walk_g/spr_player_walk_g.yy",},
-    {"name":"obj_controll","order":2,"path":"objects/obj_controll/obj_controll.yy",},
+    {"name":"obj_camera","order":2,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"spr_player_died","order":3,"path":"sprites/spr_player_died/spr_player_died.yy",},
     {"name":"spr_player_col_g","order":12,"path":"sprites/spr_player_col_g/spr_player_col_g.yy",},
     {"name":"spr_player_walk","order":1,"path":"sprites/spr_player_walk/spr_player_walk.yy",},

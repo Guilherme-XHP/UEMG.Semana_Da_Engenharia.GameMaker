@@ -1,7 +1,7 @@
 var _room = instance_position(global.cam_alvo.x, global.cam_alvo.y, obj_room);
 
 global.cam_x = global.cam_alvo.x - global.cam_w /2;
-global.cam_y = global.cam_alvo.y - global.cam_h /2;
+global.cam_y = global.cam_alvo.y - global.cam_h /1.6;
 
 if _room {
 	global.cam_x_min = _room.x;

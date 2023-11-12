@@ -10,6 +10,9 @@ if dev_mode = true{
 	draw_text(_xx, _yy * 6, "Player.y: " +string(obj_player.y));
 	draw_text(_xx, _yy * 7, "Player.D_Jump: " +string(obj_player.double_jump));
 	draw_text(_xx, _yy * 8, "Player.In_Ground: " +string(obj_player.in_ground));
+	draw_text(_xx, _yy * 9, "Game.FPS: " +string(fps));
+	draw_text(_xx, _yy * 10, "Game.True_FPS: " +string(fps_real));
+	draw_text(_xx, _yy * 11, "Player.XScale: " +string(obj_player.image_xscale));
 
 }else{
 	

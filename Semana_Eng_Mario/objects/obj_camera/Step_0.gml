@@ -1,1 +1,1 @@
-x = lerp(x, obj_player.x, 0.2);
+x = lerp(x, obj_player.x, 0.2); //Segue o player no eixo x

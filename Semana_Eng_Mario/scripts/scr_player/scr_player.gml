@@ -1,10 +1,12 @@
 function scr_player(){
 	
+	//Variaveis de botoes do jogo
 	key_left = keyboard_check(vk_left)
 	key_right = keyboard_check(vk_right)
 	key_jump = keyboard_check_pressed(ord("C"))
 	key_action = keyboard_check_pressed(ord("Z"))
 	
+	//Inicializador do movimento
 	var _move = key_right - key_left;
 
 	//Aceleracao X
@@ -15,10 +17,12 @@ function scr_player(){
 	v_spd = v_spd + global.grav;
 	v_spd = clamp(v_spd, -v_spd_max, v_spd_max);
 	
+	//Desaceleracao
 	if _move = 0{
 		h_spd = lerp(h_spd, 0, dcc);
 	}
 
+	//Dar colisao cado o player estaja vivo
 	if alive{
 		scr_collision();
 	}else{
@@ -27,7 +31,8 @@ function scr_player(){
 		y += v_spd;
 	}
 
-	#region State Machine
+	
+	#region State Machine / Animacoes do player
 	
 	if power_up = 0{
 		if state = "jump"{
@@ -51,7 +56,7 @@ function scr_player(){
 	
 	#endregion
 	
-	#region Controle  Anim
+	#region Controle Anim / Controle da animacao base
 	
 	if h_spd != 0 {
 		image_xscale = sign(h_spd);
@@ -90,7 +95,7 @@ function scr_player(){
 		}
 	#endregion
 	
-	#region Jump
+	#region Jump / todo codigo de pulo
 	
 		if alive{
 			if in_ground{
@@ -108,7 +113,7 @@ function scr_player(){
 	
 	#endregion
 	
-	#region Kill Enemy
+	#region Kill Enemy / sistema que caso o player pule em cima do inimigo, o mesmo sera destruido
 	
 	if !in_ground and v_spd > 0{
 		var _collision_enemy = instance_place(x,y + 1, obj_enemy_par);

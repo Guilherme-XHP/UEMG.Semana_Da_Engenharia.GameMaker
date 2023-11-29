@@ -1,1 +1,1 @@
-global.grav = .4;
+global.grav = .4; //Variavel da gravidade

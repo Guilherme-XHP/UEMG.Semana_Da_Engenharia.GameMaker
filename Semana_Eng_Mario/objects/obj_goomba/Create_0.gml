@@ -1,3 +1,4 @@
+//Variaveis reutilizadas do player
 spd = .5;
 acc = .4;
 dcc = 1;
